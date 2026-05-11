@@ -1,0 +1,353 @@
+================================================================================
+  SETUP GUIDE — Shtat.ai / OSHRA Framework
+  Ontological Model of the Semantic Structure of a Sentence in Uzbek
+  Author  : Xudoykulova Nargiza Ravshanovna
+  Thesis  : TATU, Data Science, 2026
+  Contact : for questions, contact the thesis author
+================================================================================
+
+  This guide will take you from a fresh PC to a fully running Shtat.ai
+  application in approximately 15–20 minutes.
+  No prior programming experience is required.
+
+  WHAT YOU WILL HAVE AT THE END:
+    ✓ The Shtat.ai dashboard open in your web browser
+    ✓ The OSHRA algorithm processing Uzbek ariza sentences
+    ✓ The OWL ontology (faculty_finall.owx) loaded and reasoned over
+
+================================================================================
+  PREREQUISITES — FILES YOU NEED
+================================================================================
+
+  Make sure the following files are all in the SAME folder on your computer.
+  Let us call that folder:  shtatai_project/
+
+    shtatai_project/
+    ├── main_v9_eri4.py          ← main application file
+    ├── faculty_finall.owx       ← OWL 2 DL ontology (the knowledge base)
+    ├── hr_faculty_list.xlsx     ← sample HR data (optional, for demo)
+    └── requirements.txt         ← this file lists all needed libraries
+
+================================================================================
+  STEP 1 — INSTALL JAVA (required for the OWL reasoner)
+================================================================================
+
+  The OSHRA algorithm uses the Pellet reasoner to check ontology constraints
+  (rules C0–C5). Pellet runs on Java. You must install Java FIRST.
+
+  ── On Windows ──────────────────────────────────────────────────────────────
+
+  1. Open your web browser and go to:
+       https://adoptium.net/temurin/releases/
+
+  2. Select:
+       Version  : 11 (LTS)
+       OS       : Windows
+       Package  : .msi installer
+
+  3. Download and run the installer.
+     When asked, check the box: "Set JAVA_HOME variable"
+
+  4. Verify the installation:
+     - Press  Windows key + R
+     - Type   cmd   and press Enter
+     - In the black window, type:
+         java -version
+     - You should see something like:
+         openjdk version "11.0.xx" ...
+     - If you see this, Java is installed correctly. ✓
+
+  ── On macOS ────────────────────────────────────────────────────────────────
+
+  1. Open Terminal (search "Terminal" in Spotlight)
+
+  2. If you have Homebrew installed, run:
+       brew install --cask temurin11
+
+     If you do not have Homebrew, download the .pkg installer from:
+       https://adoptium.net/temurin/releases/
+     (select macOS → Package Type: .pkg → Version 11)
+
+  3. Verify:
+       java -version
+     Expected output: openjdk version "11.x.x" ...  ✓
+
+  ── On Linux (Ubuntu / Debian) ───────────────────────────────────────────────
+
+    sudo apt update
+    sudo apt install openjdk-11-jdk -y
+    java -version   # verify ✓
+
+================================================================================
+  STEP 2 — INSTALL PYTHON 3.10
+================================================================================
+
+  The application requires Python version 3.9 or higher.
+  We recommend Python 3.10 for maximum compatibility.
+
+  ── Check if Python is already installed ────────────────────────────────────
+
+  Open a terminal / command prompt and type:
+    python --version
+    (or on some systems:  python3 --version)
+
+  If you see "Python 3.9.x", "3.10.x", "3.11.x", or "3.12.x" — skip ahead
+  to Step 3. If you see "Python 2.x" or an error, continue below.
+
+  ── Download Python ──────────────────────────────────────────────────────────
+
+  Go to:  https://www.python.org/downloads/
+  Download Python 3.10 (the latest 3.10.x version).
+
+  IMPORTANT on Windows: During installation, check the box
+  "Add Python to PATH" before clicking Install.
+
+================================================================================
+  STEP 3 — CREATE A VIRTUAL ENVIRONMENT
+================================================================================
+
+  A virtual environment keeps this project's libraries separate from anything
+  else on your computer. This prevents conflicts.
+
+  Open a terminal (Mac/Linux) or Command Prompt (Windows).
+  Navigate to your project folder:
+
+    cd path/to/shtatai_project
+
+  Example on Windows:
+    cd C:\Users\YourName\Desktop\shtatai_project
+
+  Example on Mac:
+    cd ~/Desktop/shtatai_project
+
+  ── Create the environment ───────────────────────────────────────────────────
+
+    python -m venv venv
+
+  This creates a folder called  venv/  inside your project folder.
+
+  ── Activate the environment ─────────────────────────────────────────────────
+
+  Windows (Command Prompt):
+    venv\Scripts\activate
+
+  Windows (PowerShell) — if the above gives an error:
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    venv\Scripts\Activate.ps1
+
+  Mac / Linux:
+    source venv/bin/activate
+
+  After activation, your terminal prompt will change to show:
+    (venv)  C:\Users\YourName\Desktop\shtatai_project>
+
+  The (venv) prefix means the environment is active. ✓
+
+================================================================================
+  STEP 4 — INSTALL ALL REQUIRED LIBRARIES
+================================================================================
+
+  Make sure your virtual environment is still active (you see "(venv)").
+  Then run:
+
+    pip install -r requirements.txt
+
+  This will download and install all libraries automatically.
+  It may take 3–7 minutes depending on your internet speed.
+
+  Expected output at the end:
+    Successfully installed streamlit-1.35.0 pandas-2.1.4 owlready2-0.46 ...
+
+  ── If you see a conflict warning about cryptography / pyopenssl ──────────
+
+  Run this additional command:
+    pip install "pyopenssl==24.1.0" --upgrade
+
+  Then retry:
+    pip install -r requirements.txt --no-deps pyhanko pyhanko-certvalidator
+
+================================================================================
+  STEP 5 — (OPTIONAL) DOWNLOAD NLP MODELS
+================================================================================
+
+  The main Shtat.ai application uses its own rule-based Uzbek NER pipeline
+  and does NOT require spaCy to be installed.
+
+  However, if you want to run the research extension experiments (Appendix B
+  of the thesis), install the multilingual spaCy model as follows:
+
+    pip install spacy==3.7.4
+    python -m spacy download xx_ent_wiki_sm
+
+  Verify the download:
+    python -c "import spacy; nlp = spacy.load('xx_ent_wiki_sm'); print('OK')"
+
+  Expected output:  OK  ✓
+
+  NOTE: The xx_ent_wiki_sm model is ~50 MB. You need an internet connection.
+
+================================================================================
+  STEP 6 — VERIFY THE ONTOLOGY FILE
+================================================================================
+
+  The ontology file  faculty_finall.owx  must be in the same folder as the
+  main Python file. Verify this:
+
+  Windows:
+    dir faculty_finall.owx
+
+  Mac / Linux:
+    ls -lh faculty_finall.owx
+
+  Expected output:  a file around 20–30 KB in size.
+
+  If the file is missing, the application will still start in DEMO MODE
+  using built-in sample data (see the "Demo Data Generator" notice in the app).
+
+  ── Quick ontology sanity check ──────────────────────────────────────────────
+
+  Run this one-liner to verify owlready2 can load the file:
+
+    python -c "
+    from owlready2 import get_ontology
+    onto = get_ontology('faculty_finall.owx').load()
+    print('Classes:', list(onto.classes()))
+    print('Ontology loaded successfully ✓')
+    "
+
+  Expected output:
+    Classes: [faculty.Event, faculty.Participant, faculty.Context, ...]
+    Ontology loaded successfully ✓
+
+================================================================================
+  STEP 7 — RUN THE APPLICATION
+================================================================================
+
+  Make sure:
+    ✓ Your virtual environment is active   (you see "(venv)" in the prompt)
+    ✓ You are in the shtatai_project/ folder
+    ✓ Java 11 is installed                 (java -version works)
+
+  Run:
+    streamlit run main_v9_eri4.py
+
+  After a few seconds you will see:
+    You can now view your Streamlit app in your browser.
+    Local URL:  http://localhost:8501
+
+  Your default browser will open automatically at http://localhost:8501
+  showing the Shtat.ai dashboard.
+
+  To stop the application at any time, go back to the terminal and press:
+    Ctrl + C
+
+================================================================================
+  STEP 8 — PROCESS A SAMPLE UZBEK SENTENCE (OSHRA DEMO)
+================================================================================
+
+  Once the application is open in your browser:
+
+  1. Click the tab:  📋 Shtat-Read (NLP Ariza Moduli)
+
+  2. In the text box, paste this test sentence:
+       Men, Nargiza Xudoykulova, Kompyuter injiniringi kafedrasi uchun
+       1.0 shtatda asosiy o'rindosh sifatida Dotsent lavozimiga
+       qabul qilinishimni so'rayman.
+
+  3. Click the blue button:  Arizani Tahlil Qilish
+
+  4. The OSHRA algorithm will:
+     ─ STAGE 1  Identify the predicate:  so'rayman  (RequestEvent)
+     ─ STAGE 2  Extract participants:    Nargiza Xudoykulova (Agent)
+     ─ STAGE 3  Assign roles:            hasAgent, hasRole → Dotsent
+     ─ STAGE 4  Attach context:          1.0 SB (QuantityContext), Asosiy
+     ─ OUTPUT   OWL Turtle assertion generated and displayed
+
+  5. You will see a green  ARIZA TASDIQLANDI  banner if all ontology
+     constraints (C0–C5) are satisfied, or a red  INVALID  banner with
+     the specific violated constraint code if the sentence has errors.
+
+================================================================================
+  TROUBLESHOOTING
+================================================================================
+
+  ── "Java not found" or "Pellet reasoner failed" ─────────────────────────────
+
+  The Pellet reasoner requires Java to be on the system PATH.
+
+  Check: java -version
+  If this fails, reinstall Java from Step 1 and restart your terminal.
+
+  On Mac with multiple Java versions, set the correct one:
+    export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+
+  ── "ModuleNotFoundError: No module named 'streamlit'" ───────────────────────
+
+  Your virtual environment is not active. Run:
+    Windows:  venv\Scripts\activate
+    Mac/Linux: source venv/bin/activate
+  Then retry:  streamlit run main_v9_eri4.py
+
+  ── "faculty_finall.owx not found" ───────────────────────────────────────────
+
+  The application will show a DEMO MODE warning. This means the .owx file
+  is in a different folder. Move it to the same folder as main_v9_eri4.py.
+
+  ── Port 8501 already in use ─────────────────────────────────────────────────
+
+  Run on a different port:
+    streamlit run main_v9_eri4.py --server.port 8502
+  Then open: http://localhost:8502
+
+  ── pip install fails with SSL error ─────────────────────────────────────────
+
+  Try:
+    pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org \
+        -r requirements.txt
+
+================================================================================
+  PROJECT STRUCTURE REFERENCE
+================================================================================
+
+  shtatai_project/
+  │
+  ├── main_v9_eri4.py          Main application (OSHRA + ERI + Streamlit GUI)
+  ├── faculty_finall.owx       OWL 2 DL ontology — 5 classes, 14 properties,
+  │                            7 validation rules (C0–C5 + global workload)
+  ├── hr_faculty_list.xlsx     Sample faculty HR data for demo loading
+  ├── requirements.txt         Python library dependencies
+  └── setup_guide.txt          This file
+
+  ── Key modules inside main_v9_eri4.py ──────────────────────────────────────
+
+  extract_entities()           OSHRA Layer 4 — Uzbek NER (regex-based)
+                               Extracts: ism, lavozim, shtat, bandlik
+
+  aggregate_by_identity()      OSHRA Layer 5 — cumulative identity aggregation
+                               Checks global 1.5 SB workload constraint
+
+  eri_verify_signature()       ERI Layer 0 — Didox protocol verification
+                               Checks фиш + ЖШШИР markers on page 1
+
+  eri_name_match_score()       STF-ER — entity resolution
+                               resolve(S,A) = 0.70×LastnameMatch + 0.30×First
+
+  tab_nlp_ariza()              Streamlit tab — full OSHRA pipeline UI
+  tab_monitoring()             Streamlit tab — faculty workload dashboard
+  tab_audit()                  Streamlit tab — semantic audit / reasoning engine
+  tab_analytics()              Streamlit tab — Kafedrometr analytics
+
+================================================================================
+  SOFTWARE CERTIFICATE
+================================================================================
+
+  This software is registered in the State Registry of Software Products
+  of the Republic of Uzbekistan:
+    Certificate № DGU 63730
+    Registration date: 05.05.2026
+    System name: "Shtat.ai" kadrlar va shtat birliklarini
+                 boshqarishning intellektual tizimi
+
+================================================================================
+  END OF SETUP GUIDE
+================================================================================

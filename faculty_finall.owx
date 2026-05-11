@@ -1,0 +1,828 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://ds.univ.uz/ontology/uzbek-sentence-semantic-hr"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://ds.univ.uz/ontology/uzbek-sentence-semantic-hr">
+    <Prefix name="" IRI="http://www.semanticweb.org/hp/ontologies/2026/3/untitled-ontology-3/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Asosiy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Assistent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dotsent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dotsent_lavozimi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EmploymentType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ichki_orindosh"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Katta_oqituvchi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Oqituvchi_lavozimi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Orindoshlik"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Position"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Professor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Professor_lavozimi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stajer_oqituvchi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tashqi_orindosh"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VB_Dotsent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VB_Professor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#bandlik_sharti"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#egallaydi"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#shtat_birligi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_02"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_03"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_04"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_05"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_06"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_07"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_08"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_09"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_11"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_12"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_13"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_14"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_15"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_17"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_19"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_20"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_22"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_23"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_24"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_25"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_26"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_27"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_28"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_29"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_30"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_31"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xodim_32"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Asosiy"/>
+        <Class IRI="#EmploymentType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Assistent"/>
+        <Class IRI="#Oqituvchi_lavozimi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dotsent"/>
+        <Class IRI="#Dotsent_lavozimi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dotsent_lavozimi"/>
+        <Class IRI="#Position"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ichki_orindosh"/>
+        <Class IRI="#Orindoshlik"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Katta_oqituvchi"/>
+        <Class IRI="#Oqituvchi_lavozimi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Oqituvchi_lavozimi"/>
+        <Class IRI="#Position"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Orindoshlik"/>
+        <Class IRI="#EmploymentType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Professor"/>
+        <Class IRI="#Professor_lavozimi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Professor_lavozimi"/>
+        <Class IRI="#Position"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stajer_oqituvchi"/>
+        <Class IRI="#Oqituvchi_lavozimi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tashqi_orindosh"/>
+        <Class IRI="#Orindoshlik"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VB_Dotsent"/>
+        <Class IRI="#Dotsent_lavozimi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VB_Professor"/>
+        <Class IRI="#Professor_lavozimi"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Asosiy"/>
+        <NamedIndividual IRI="#xodim_01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VB_Dotsent"/>
+        <NamedIndividual IRI="#xodim_01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ichki_orindosh"/>
+        <NamedIndividual IRI="#xodim_02"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VB_Dotsent"/>
+        <NamedIndividual IRI="#xodim_02"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Asosiy"/>
+        <NamedIndividual IRI="#xodim_03"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dotsent"/>
+        <NamedIndividual IRI="#xodim_03"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dotsent"/>
+        <NamedIndividual IRI="#xodim_04"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ichki_orindosh"/>
+        <NamedIndividual IRI="#xodim_04"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Asosiy"/>
+        <NamedIndividual IRI="#xodim_05"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Assistent"/>
+        <NamedIndividual IRI="#xodim_05"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Asosiy"/>
+        <NamedIndividual IRI="#xodim_06"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Assistent"/>
+        <NamedIndividual IRI="#xodim_06"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Assistent"/>
+        <NamedIndividual IRI="#xodim_07"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ichki_orindosh"/>
+        <NamedIndividual IRI="#xodim_07"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Asosiy"/>
+        <NamedIndividual IRI="#xodim_08"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VB_Dotsent"/>
+        <NamedIndividual IRI="#xodim_08"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ichki_orindosh"/>
+        <NamedIndividual IRI="#xodim_09"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VB_Dotsent"/>
+        <NamedIndividual IRI="#xodim_09"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Asosiy"/>
+        <NamedIndividual IRI="#xodim_10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Katta_oqituvchi"/>
+        <NamedIndividual IRI="#xodim_10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Asosiy"/>
+        <NamedIndividual IRI="#xodim_11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dotsent"/>
+        <NamedIndividual IRI="#xodim_11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Asosiy"/>
+        <NamedIndividual IRI="#xodim_12"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dotsent"/>
+        <NamedIndividual IRI="#xodim_12"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dotsent"/>
+        <NamedIndividual IRI="#xodim_13"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ichki_orindosh"/>
+        <NamedIndividual IRI="#xodim_13"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Asosiy"/>
+        <NamedIndividual IRI="#xodim_14"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Katta_oqituvchi"/>
+        <NamedIndividual IRI="#xodim_14"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ichki_orindosh"/>
+        <NamedIndividual IRI="#xodim_15"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Katta_oqituvchi"/>
+        <NamedIndividual IRI="#xodim_15"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Asosiy"/>
+        <NamedIndividual IRI="#xodim_16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dotsent"/>
+        <NamedIndividual IRI="#xodim_16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Asosiy"/>
+        <NamedIndividual IRI="#xodim_17"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Katta_oqituvchi"/>
+        <NamedIndividual IRI="#xodim_17"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Asosiy"/>
+        <NamedIndividual IRI="#xodim_18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Assistent"/>
+        <NamedIndividual IRI="#xodim_18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Assistent"/>
+        <NamedIndividual IRI="#xodim_19"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ichki_orindosh"/>
+        <NamedIndividual IRI="#xodim_19"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Asosiy"/>
+        <NamedIndividual IRI="#xodim_20"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Katta_oqituvchi"/>
+        <NamedIndividual IRI="#xodim_20"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Asosiy"/>
+        <NamedIndividual IRI="#xodim_21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Assistent"/>
+        <NamedIndividual IRI="#xodim_21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tashqi_orindosh"/>
+        <NamedIndividual IRI="#xodim_22"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VB_Dotsent"/>
+        <NamedIndividual IRI="#xodim_22"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Assistent"/>
+        <NamedIndividual IRI="#xodim_23"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tashqi_orindosh"/>
+        <NamedIndividual IRI="#xodim_23"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dotsent"/>
+        <NamedIndividual IRI="#xodim_24"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tashqi_orindosh"/>
+        <NamedIndividual IRI="#xodim_24"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Assistent"/>
+        <NamedIndividual IRI="#xodim_25"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tashqi_orindosh"/>
+        <NamedIndividual IRI="#xodim_25"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Professor"/>
+        <NamedIndividual IRI="#xodim_26"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tashqi_orindosh"/>
+        <NamedIndividual IRI="#xodim_26"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Assistent"/>
+        <NamedIndividual IRI="#xodim_27"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tashqi_orindosh"/>
+        <NamedIndividual IRI="#xodim_27"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Professor"/>
+        <NamedIndividual IRI="#xodim_28"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tashqi_orindosh"/>
+        <NamedIndividual IRI="#xodim_28"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Assistent"/>
+        <NamedIndividual IRI="#xodim_29"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tashqi_orindosh"/>
+        <NamedIndividual IRI="#xodim_29"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Katta_oqituvchi"/>
+        <NamedIndividual IRI="#xodim_30"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tashqi_orindosh"/>
+        <NamedIndividual IRI="#xodim_30"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Assistent"/>
+        <NamedIndividual IRI="#xodim_31"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tashqi_orindosh"/>
+        <NamedIndividual IRI="#xodim_31"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Assistent"/>
+        <NamedIndividual IRI="#xodim_32"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tashqi_orindosh"/>
+        <NamedIndividual IRI="#xodim_32"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_01"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_02"/>
+        <Literal>0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_03"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_04"/>
+        <Literal>0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_05"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_06"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_07"/>
+        <Literal>0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_08"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_09"/>
+        <Literal>0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_10"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_11"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_12"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_13"/>
+        <Literal>0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_14"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_15"/>
+        <Literal>0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_16"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_17"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_18"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_19"/>
+        <Literal>0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_20"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_21"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_22"/>
+        <Literal>0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_23"/>
+        <Literal>0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_24"/>
+        <Literal>0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_25"/>
+        <Literal>0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_26"/>
+        <Literal>0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_27"/>
+        <Literal>0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_28"/>
+        <Literal>0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_29"/>
+        <Literal>0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_30"/>
+        <Literal>0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_31"/>
+        <Literal>0.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#shtat_birligi"/>
+        <NamedIndividual IRI="#xodim_32"/>
+        <Literal>0.5</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#bandlik_sharti"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#egallaydi"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#bandlik_sharti"/>
+        <Class IRI="#EmploymentType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#egallaydi"/>
+        <Class IRI="#Position"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#shtat_birligi"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_01</IRI>
+        <Literal>Abidova Sh.B.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_02</IRI>
+        <Literal>Abidova Sh.B.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_03</IRI>
+        <Literal>Artikova M.A.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_04</IRI>
+        <Literal>Artikova M.A.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_05</IRI>
+        <Literal>Azimov S.R.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_06</IRI>
+        <Literal>Jo&apos;rayev A.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_07</IRI>
+        <Literal>Jo&apos;rayev A.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_08</IRI>
+        <Literal>Mahmudova M.M.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_09</IRI>
+        <Literal>Mahmudova M.M.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_10</IRI>
+        <Literal>Nazirov A.Sh.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_11</IRI>
+        <Literal>Ne&apos;matov A.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_12</IRI>
+        <Literal>Sadikov R.T.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_13</IRI>
+        <Literal>Sadikov R.T.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_14</IRI>
+        <Literal>Sayfiyev E.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_15</IRI>
+        <Literal>Sayfiyev E.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_16</IRI>
+        <Literal>Sharipov D.K.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_17</IRI>
+        <Literal>Talipova O.X.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_18</IRI>
+        <Literal>Xayrullayev U.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_19</IRI>
+        <Literal>Xayrullayev U.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_20</IRI>
+        <Literal>Xusanov Sh.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_21</IRI>
+        <Literal>Xolmuminov Yu.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_22</IRI>
+        <Literal>Ismailov Sh.R.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_23</IRI>
+        <Literal>Karabayeva Z.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_24</IRI>
+        <Literal>Kushnazarov F.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_25</IRI>
+        <Literal>Medetbayeva N.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_26</IRI>
+        <Literal>Nazirova E.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_27</IRI>
+        <Literal>Nurjabova O.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_28</IRI>
+        <Literal>Ravshanov N.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_29</IRI>
+        <Literal>Rayimqulov O.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_30</IRI>
+        <Literal>Uzoquva M.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_31</IRI>
+        <Literal>Xudayberganov Sh.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xodim_32</IRI>
+        <Literal>Xolmuminov Y.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
