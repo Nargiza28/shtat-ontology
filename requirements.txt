@@ -1,51 +1,30 @@
-# =============================================================================
-# requirements.txt
-# Project : Shtat.ai — Ontological Model of the Semantic Structure of a
-#           Sentence in Uzbek (OSHRA Framework)
-# Author  : Xudoykulova Nargiza Ravshanovna
-# Thesis  : TATU, Data Science, 2026
-# Python  : 3.9 or higher (3.10 / 3.11 recommended)
-#
-# Install : pip install -r requirements.txt
-# =============================================================================
-
 # ── Core web interface ────────────────────────────────────────────────────────
-streamlit==1.35.0               # Main GUI framework for Shtat.ai dashboard
+streamlit>=1.35.0
 
 # ── Data layer ────────────────────────────────────────────────────────────────
-pandas==2.1.4                   # DataFrame operations and Excel loading
-numpy==1.26.4                   # Numerical computations (used by pandas/plotly)
-openpyxl==3.1.2                 # Read/write .xlsx files (hr_faculty_list.xlsx)
+pandas>=2.2.0
+numpy>=1.26.0
+openpyxl>=3.1.0
 
 # ── Visualisation ─────────────────────────────────────────────────────────────
-plotly==5.20.0                  # Interactive charts (Kafedrometr gauge, bar charts)
+plotly>=5.20.0
 
 # ── OWL Ontology (OSHRA Layer 1) ─────────────────────────────────────────────
-owlready2==0.46                 # Load faculty_finall.owx, run Pellet/HermiT reasoner
-# NOTE: Pellet reasoner requires Java 11+. See setup_guide.txt § 1.
+owlready2>=0.45
 
 # ── PDF processing (ERI / Didox protocol) ────────────────────────────────────
-pdfplumber==0.11.0              # Primary: extract text per page from Didox PDFs
-pymupdf==1.24.3                 # Fallback: PyMuPDF (fitz) if pdfplumber unavailable
+pdfplumber>=0.11.0
+pymupdf>=1.24.0
 
 # ── Digital signature verification (ERI layer) ───────────────────────────────
-pyhanko==0.35.1                 # Detect embedded ERI signature blocks in PDF
-pyhanko-certvalidator==0.31.1   # Certificate validation support for pyHanko
+pyhanko>=0.35.0
+pyhanko-certvalidator>=0.31.0
 
 # ── RDF / Semantic Web output ─────────────────────────────────────────────────
-rdflib==7.0.0                   # Generate OWL Turtle (.ttl) ABox assertions
+rdflib>=7.0.0
 
-# ── Cryptography (dependency of pyhanko) ─────────────────────────────────────
-cryptography==41.0.7            # Pinned: avoids conflict with pyopenssl 24.x
+# ── Cryptography ─────────────────────────────────────────────────────────────
+cryptography>=42.0.0
 
 # ── Utilities ─────────────────────────────────────────────────────────────────
-lxml==5.2.1                     # XML/OWL file parsing used by owlready2
-
-# =============================================================================
-# OPTIONAL — install only if you want spaCy-based NER experiments
-# (the main Shtat.ai app uses regex NER; spaCy is for research extension)
-# =============================================================================
-# spacy==3.7.4
-# After installing spaCy, download the multilingual model:
-#   python -m spacy download xx_ent_wiki_sm
-# =============================================================================
+lxml>=5.2.1
