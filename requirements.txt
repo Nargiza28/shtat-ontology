@@ -11,9 +11,10 @@
 
 # ── Core web interface ────────────────────────────────────────────────────────
 streamlit==1.35.0               # Main GUI framework for Shtat.ai dashboard
-
+streamlit-lottie
+streamlit-extras
 # ── Data layer ────────────────────────────────────────────────────────────────
-pandas==2.1.4                   # DataFrame operations and Excel loading
+pandas>=2.2.0                   # DataFrame operations and Excel loading
 numpy==1.26.4                   # Numerical computations (used by pandas/plotly)
 openpyxl==3.1.2                 # Read/write .xlsx files (hr_faculty_list.xlsx)
 
@@ -29,17 +30,17 @@ pdfplumber==0.11.0              # Primary: extract text per page from Didox PDFs
 pymupdf==1.24.3                 # Fallback: PyMuPDF (fitz) if pdfplumber unavailable
 
 # ── Digital signature verification (ERI layer) ───────────────────────────────
-pyhanko==0.35.1                 # Detect embedded ERI signature blocks in PDF
+pyhanko>=0.35.1                 # Detect embedded ERI signature blocks in PDF
 pyhanko-certvalidator==0.31.1   # Certificate validation support for pyHanko
 
 # ── RDF / Semantic Web output ─────────────────────────────────────────────────
 rdflib==7.0.0                   # Generate OWL Turtle (.ttl) ABox assertions
 
 # ── Cryptography (dependency of pyhanko) ─────────────────────────────────────
-cryptography==41.0.7            # Pinned: avoids conflict with pyopenssl 24.x
+cryptography>=48.0.0            # Pinned: avoids conflict with pyopenssl 24.x
 
 # ── Utilities ─────────────────────────────────────────────────────────────────
-lxml==5.2.1                     # XML/OWL file parsing used by owlready2
+lxml>=5.2.1                     # XML/OWL file parsing used by owlready2
 
 # =============================================================================
 # OPTIONAL — install only if you want spaCy-based NER experiments
